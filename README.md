@@ -249,7 +249,7 @@ Dopisujemy w layoucie aplikacji, w znaczniku *body*:
     </div>
     <% end %>
 
-15. **GREEN:**
+15\. **GREEN:**
 
     .
     Finished in 0.47093 seconds
