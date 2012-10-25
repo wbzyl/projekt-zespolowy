@@ -11,6 +11,13 @@ Post-install:
     rails generate rspec:install
     rails generate mongoid:config
 
+## Gdzie wdrożyć?
+
+* [OpenShift](https://openshift.redhat.com/community/get-started/ruby-on-rails)
+* [Heroku](http://www.heroku.com/)
+* [MongoLab](https://mongolab.com/home/) (baza do 0.5GB)
+* [MongoHQ](https://www.mongohq.com/home) (baza do 0.5GB)
+
 
 ## RSpec
 
