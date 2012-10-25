@@ -9,6 +9,7 @@ Generujemy rusztowanie:
 Post-install:
 
     rails generate rspec:install
+    rails generate mongoid:config
 
 
 ## RSpec
