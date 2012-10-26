@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
       redirect_to @project
     else
       flash[:alert] = "Project has not been created."
-      render :action => "new"
+      render action: "new"
     end
   end
 
@@ -33,6 +33,7 @@ class ProjectsController < ApplicationController
     if @project.update_attributes(params[:project])
       redirect_to @project, notice: 'Project has been updated.'
     else
+      flash[:alert] = "Project has not been updated."
       render action: "edit"
     end
   end
