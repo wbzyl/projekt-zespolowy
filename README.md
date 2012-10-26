@@ -23,8 +23,16 @@ Post-install:
 
 * [mongoid-rspec](https://github.com/evansagge/mongoid-rspec)
 
+Poniżej testujemy tylko *requests* (*integration*):
 
-### spec/requests/creating_projects_spec.rb
+    rake spec:requests
+
+Generatory Mongoid czasami generują zbędny kod, na przykład
+w widokach mamy *id* oraz niepotrzebne *_id* i *_type*.
+Usunąłem te rzeczy oraz nieco poprawiłem kod formularzy.
+
+
+## spec/requests/creating_projects_spec.rb
 
 Pierwszy test:
 
@@ -287,3 +295,74 @@ Dopisujemy w metodzie *index*:
 Wymieniamy w linijkę z `click_link` w pliku *spec/requests/creating_projects_spec.rb*:
 
     click_link 'New'
+
+Zmiany z gałęzi *add-bootstrap* scaliłem z *master*.
+
+
+### kontynuacja spec/requests/creating_projects_spec.rb
+
+Tytuł strony oraz walidacja.  Zaczniemy od tytułu. Do istniejącego
+scenariusza dopisujemy cztery wiersze kodu:
+
+    feature 'Creating Projects' do
+      scenario "can create a project" do
+        visit '/'
+        click_link 'New Project'
+        fill_in 'Name', :with => 'Fortune'
+        fill_in 'Description', :with => "Sample Rails Apps"
+        click_button 'Create Project'
+        page.should have_content('Project has been created.')
+
+        # NEW
+        project = Project.find_by(name: "Fortune")
+        page.current_url.should == project_url(project)
+        title = "Projekt Zespołowy | Fortune"
+        find("title").should have_content(title)
+      end
+    end
+
+1\. RED:
+
+    Failures:
+
+      1) Creating Projects can create a project
+         Failure/Error: find("title").should have_content(title)
+           expected there to be content "Projekt Zespołowy | Fortune" in "Projekt Zespolowy 2012/13"
+
+W layoucie aplikacji podmieniamy element *title* na:
+
+    <title><%= @title || "Projekt Zespołowy 2012/13" %></title>
+
+W pliku *show.html.erb* dopisujemy:
+
+    <% @title = "Projekt Zespołowy | Fortune" %>
+
+
+2\. GREEN: **Refaktoryzacja**
+
+Tytuł nie zmienia się przy zmianie nazwy projektu. Oczywiście nazwa
+w tytule musi zmieniać się ze zmianą nazwy projektu.
+
+Definiujemy metodę pomocniczą aplikacji:
+
+    module ApplicationHelper
+      def title(*parts)
+        unless parts.empty?
+          content_for :title do
+            parts.unshift("Projekt Zespołowy").join(" | ")
+          end
+        end
+      end
+    end
+
+Ponownie podmieniamy znacznik *title* w layoucie aplikacji:
+
+    <title>
+    <% if content_for?(:title) %>
+      <%= yield(:title) %>
+    <% else %>
+      Projekt Zespołowy 2012/13
+    <% end %>
+    </title>
+
+3\. **GREEN**.
