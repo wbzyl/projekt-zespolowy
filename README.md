@@ -5,6 +5,7 @@
 TODO (Twitter?):
 
 * [Absolutely Dead Simple Login System for Rails With Omniauth and Facebook](http://blog.ragingstudios.com/blog/2012/10/24/absolutely-dead-simple-login-system-for-rails-with-omniauth-and-facebook/)
+* [Render your http errors in your layout reducing the need for static files.](https://github.com/eric1234/better_exception_app)
 
 Generujemy rusztowanie:
 
