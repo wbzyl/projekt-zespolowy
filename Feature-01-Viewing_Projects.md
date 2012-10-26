@@ -1,6 +1,6 @@
 # Requests: Viewing Projects
 
-Tym razem uruchamiamy tylko tem plik spec:
+Tym razem uruchamiamy tylko ten plik spec:
 
     rspec spec/requests/viewing_projects_spec.rb
 
