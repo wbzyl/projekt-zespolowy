@@ -255,3 +255,35 @@ Dopisujemy w layoucie aplikacji, w znaczniku *body*:
     Finished in 0.47093 seconds
     1 example, 0 failures
 
+
+## Dodajemy Bootstrap + SimpleForm
+
+Tak jak to opisano na stronie wykładu.
+
+1\. RED:
+
+    Failures:
+
+      1) Creating Projects can create a project
+         Failure/Error: visit '/'
+         ActionView::Template::Error:
+           undefined method `each' for nil:NilClass
+
+Dopisujemy w metodzie *index*:
+
+    def index
+      @projects = Project.all
+    end
+
+2\. RED:
+
+    Failures:
+
+      1) Creating Projects can create a project
+         Failure/Error: click_link 'New Project'
+         Capybara::ElementNotFound:
+           no link with title, id or text 'New Project' found
+
+Wymieniamy w linijkę z `click_link` w pliku *spec/requests/creating_projects_spec.rb*:
+
+    click_link 'New'

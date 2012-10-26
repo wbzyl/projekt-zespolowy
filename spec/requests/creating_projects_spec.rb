@@ -2,7 +2,7 @@ require 'spec_helper'
 feature 'Creating Projects' do
   scenario "can create a project" do
     visit '/'
-    click_link 'New Project'
+    click_link 'New'
     fill_in 'Name', :with => 'Fortune'
     fill_in 'Description', :with => "Sample Rails Apps"
     click_button 'Create Project'
