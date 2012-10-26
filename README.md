@@ -2,6 +2,10 @@
 
 * [Rails Tutorial for Devise with Mongoid](http://railsapps.github.com/tutorial-rails-mongoid-devise.html)
 
+TODO (Twitter?):
+
+* [Absolutely Dead Simple Login System for Rails With Omniauth and Facebook](http://blog.ragingstudios.com/blog/2012/10/24/absolutely-dead-simple-login-system-for-rails-with-omniauth-and-facebook/)
+
 Generujemy rusztowanie:
 
     rails new projekt-zespolowy --skip-test-unit --skip-bundle --skip-active-record
