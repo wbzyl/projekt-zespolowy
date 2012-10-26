@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :project do
-    name "MyString"
-    description "MyText"
+    name "Fortune"
+    description "A simple Rails 3 app"
   end
 end

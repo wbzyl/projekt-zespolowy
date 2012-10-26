@@ -32,6 +32,7 @@ group :test do
   # using Capybara with RSpec:
   #   http://rubydoc.info/github/jnicklas/capybara#Using_Capybara_with_RSpec
   gem 'capybara', '~> 1.1.2'
+  # gem 'factory_girl', '~> 4.1.0'
   gem 'database_cleaner', '~> 0.9.1'
   gem 'email_spec', '~> 1.2.1'
   gem 'mongoid-rspec', '~> 1.5.4'
