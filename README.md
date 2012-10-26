@@ -1,6 +1,6 @@
 # Projekt Zespołowy
 
-* [rails3-bootstrap-devise-cancan](http://railsapps.github.com/tutorial-rails-mongoid-devise.html)
+* [Rails Tutorial for Devise with Mongoid](http://railsapps.github.com/tutorial-rails-mongoid-devise.html)
 
 Generujemy rusztowanie:
 
