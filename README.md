@@ -301,8 +301,7 @@ Zmiany z gałęzi *add-bootstrap* scaliłem z *master*.
 
 ### kontynuacja spec/requests/creating_projects_spec.rb
 
-Tytuł strony oraz walidacja.  Zaczniemy od tytułu. Do istniejącego
-scenariusza dopisujemy cztery wiersze kodu:
+Tytuł strony. Do istniejącego scenariusza dopisujemy cztery wiersze kodu:
 
     feature 'Creating Projects' do
       scenario "can create a project" do
@@ -366,3 +365,57 @@ Ponownie podmieniamy znacznik *title* w layoucie aplikacji:
     </title>
 
 3\. **GREEN**.
+
+
+## walidacja spec/requests/creating_projects_spec.rb
+
+Dodajemy drugi scenariusz:
+
+    scenario "can not create a project without a name" do
+      visit '/'
+      click_link 'New'
+      click_button 'Create Project'
+      page.should have_content("Project has not been created.")
+      page.should have_content("can't be blank")
+    end
+
+Pierwsze dwie linijki obu scenariuszy są takie same. Przenosimy je
+do bloku *before*:
+
+    feature 'Creating Projects' do
+      before do
+        visit '/'
+        click_link 'New'
+      end
+
+i usuwamy ze scenariuszy.
+
+1\. RED:
+
+    Failures:
+
+      1) Creating Projects can not create a project without a name
+         Failure/Error: page.should have_content("Project has not been created.")
+           expected there to be content "Project has not been created." in "\n
+      [.. cut ..]
+
+W kodzie kontrolera poprawiamy kod metody *create*:
+
+    def create
+      @project = Project.new(params[:project])
+      if @project.save
+        flash[:notice] = "Project has been created."
+        redirect_to @project
+      else
+        flash[:alert] = "Project has not been created."
+        render :action => "new"
+      end
+    end
+
+W kodzie modelu dopisujemy:
+
+    attr_accessible :name, :description
+    validates :name, :presence => true
+
+2\. GREEN
+
