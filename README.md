@@ -4,8 +4,6 @@ Przykładowa aplikacja Rails 3.2 korzystająca z bazy MongoDB
 (gem Mongoid) z autentykacją OAuth (via Github), autoryzacją
 (gem CanCan) i z testami RSpec.
 
-* [Rails Tutorial for Devise with Mongoid](http://railsapps.github.com/tutorial-rails-mongoid-devise.html)
-
 Zaczynamy od wygenerowania rusztowania dla aplikacji:
 
     rails new projekt-zespolowy --skip-test-unit --skip-bundle --skip-active-record
@@ -21,6 +19,8 @@ Linki do dokumentacji (gemów, Twitter Bootstrap, etc.):
 * [rspec-rails](http://rubydoc.info/github/rspec/rspec-rails/file/README.md)
 * [capybara](http://rubydoc.info/github/jnicklas/capybara/file/README.md)
 * [simple_form](https://github.com/plataformatec/simple_form)
+* [omniauth](https://github.com/intridea/omniauth/wiki)
+* [omniauth-github](https://github.com/intridea/omniauth-github)
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 
 TODO:
@@ -30,6 +30,14 @@ TODO:
 
 W katalogu *doc* umieściłem kilka plików generowanych przez
 generator *scaffold*. (Użyteczna ściąga?)
+
+RSpec konfigurowałem korzystając z samouczka Daniela Kehoe:
+
+* [Rails Tutorial for Devise with Mongoid](http://railsapps.github.com/tutorial-rails-mongoid-devise.html)
+
+OmniAuth z innego samouczka tego samego autora:
+
+* [Rails Tutorial for OmniAuth with Mongoid](http://railsapps.github.com/tutorial-rails-mongoid-omniauth.html)
 
 
 ## RSpec
