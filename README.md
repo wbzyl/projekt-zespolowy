@@ -1,59 +1,73 @@
 # Projekt Zespołowy
 
+Przykładowa aplikacja Rails 3.2 korzystająca z bazy MongoDB,
+(gem Mongoid) z autentykacją OAuth (via Github), autoryzacją
+(gem CanCan) i z testami RSpec.
+
 * [Rails Tutorial for Devise with Mongoid](http://railsapps.github.com/tutorial-rails-mongoid-devise.html)
 
-TODO (Twitter?):
-
-* [Absolutely Dead Simple Login System for Rails With Omniauth and Facebook](http://blog.ragingstudios.com/blog/2012/10/24/absolutely-dead-simple-login-system-for-rails-with-omniauth-and-facebook/)
-* [Render your http errors in your layout reducing the need for static files.](https://github.com/eric1234/better_exception_app)
-
-Generujemy rusztowanie:
+Zaczynamy od wygenerowania rusztowania dla aplikacji:
 
     rails new projekt-zespolowy --skip-test-unit --skip-bundle --skip-active-record
 
-Post-install:
+oraz procedury „post-install”:
 
     rails generate rspec:install
     rails generate mongoid:config
 
-## Gdzie wdrożyć?
+Linki do dokumentacji (gemów, Twitter Bootstrap, etc.):
 
-* [OpenShift](https://openshift.redhat.com/community/get-started/ruby-on-rails)
-* [Heroku](http://www.heroku.com/)
-* [MongoLab](https://mongolab.com/home/) (baza do 0.5GB)
-* [MongoHQ](https://www.mongohq.com/home) (baza do 0.5GB)
+* [mongoid-rspec](https://github.com/evansagge/mongoid-rspec)
+* [rspec-rails](http://rubydoc.info/github/rspec/rspec-rails/file/README.md)
+* [capybara](http://rubydoc.info/github/jnicklas/capybara/file/README.md)
+* [simple_form](https://github.com/plataformatec/simple_form)
+* [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+
+TODO:
+
+* przyśpieszenie wykonywania testów
+  – [Testing JavaScript with PhantomJS](http://railscasts.com/episodes/391-testing-javascript-with-phantomjs)
+
+W katalogu *doc* umieściłem kilka plików generowanych przez
+generator *scaffold*. (Użyteczna ściąga?)
 
 
 ## RSpec
 
-* [mongoid-rspec](https://github.com/evansagge/mongoid-rspec)
+Poniżej wkleiłem kod testów *requests* (*integration*)
+oraz *controllers*.
 
-Poniżej testujemy tylko *requests* (*integration*):
+Wszystkie testy uruchamiamy wpisując na konsoli:
 
     rake spec:requests
 
-Generatory Mongoid czasami generują zbędny kod, na przykład
-w widokach mamy *id* oraz niepotrzebne *_id* i *_type*.
-Usunąłem te rzeczy oraz nieco poprawiłem kod formularzy.
+albo, uruchamiając konkretny test, tak:
+
+    rspec spec/requests/creating_projects_spec.rb
+
+*Uwaga:* Generatory Mongoid wgenerowały nieco zbędnego kodu.
+Na przykład w widokach pojawiają się niepotrzebne *_id* i *_type*.
+Usunąłem te rzeczy oraz przy okazji poprawiłem nieco kod formularzy.
 
 
 ## spec/requests/creating_projects_spec.rb
 
 Pierwszy test:
 
-    require 'spec_helper'
+```ruby
+require 'spec_helper'
 
-    feature 'Creating Projects' do
-      scenario "can create a project" do
-        visit '/'
-        click_link 'New Project'
-        fill_in 'Name', :with => 'Fortune'
-        fill_in 'Description', :with => "Sample Rails Apps"
-        click_button 'Create Project'
-        page.should have_content('Project has been created.')
-      end
-    end
-
+feature 'Creating Projects' do
+  scenario "can create a project" do
+    visit '/'
+    click_link 'New Project'
+    fill_in 'Name', :with => 'Fortune'
+    fill_in 'Description', :with => "Sample Rails Apps"
+    click_button 'Create Project'
+    page.should have_content('Project has been created.')
+  end
+end
+```
 
 1\. RED:
 
@@ -167,9 +181,11 @@ Tworzymy pusty plik na konsoli:
 
 Zmieniamy definicję *new* na:
 
-    def new
-      @project = Project.new
-    end
+```ruby
+def new
+  @project = Project.new
+end
+```
 
 Generujemy model:
 
@@ -199,15 +215,17 @@ Przygotowujemy środowisko *test*:
 
 Tworzymy metodę *create*:
 
-    def create
-      @project = Project.new(params[:project])
-      if @project.save
-        flash[:notice] = "Project has been created."
-        redirect_to @project
-      else
-        # nothing, yet
-      end
-    end
+```ruby
+def create
+  @project = Project.new(params[:project])
+  if @project.save
+    flash[:notice] = "Project has been created."
+    redirect_to @project
+  else
+    # nothing, yet
+  end
+end
+```
 
 12\. RED:
 
@@ -220,9 +238,11 @@ Tworzymy metodę *create*:
 
 Dopisujemy do kontrolera „niepustą” metodę *show* (pusta metoda to za mało):
 
+```rubt
     def show
       @project = Project.find(params[:id])
     end
+```
 
 13\. RED:
 
@@ -252,15 +272,19 @@ Tworzymy pusty plik *show.html.erb*:
 
 Dopisujemy w *show.html.erb*:
 
-    <h2><%= @project.name %></h2>
+```rhtml
+<h2><%= @project.name %></h2>
+```
 
 Dopisujemy w layoucie aplikacji, w znaczniku *body*:
 
-    <% flash.each do |key, value| %>
-    <div class='flash' id='<%= key %>'>
-      <%= value %>
-    </div>
-    <% end %>
+```rhtml
+<% flash.each do |key, value| %>
+<div class='flash' id='<%= key %>'>
+  <%= value %>
+</div>
+<% end %>
+```
 
 15\. **GREEN:**
 
@@ -284,9 +308,11 @@ Tak jak to opisano na stronie wykładu.
 
 Dopisujemy w metodzie *index*:
 
-    def index
-      @projects = Project.all
-    end
+```ruby
+def index
+  @projects = Project.all
+end
+```
 
 2\. RED:
 
@@ -299,7 +325,9 @@ Dopisujemy w metodzie *index*:
 
 Wymieniamy w linijkę z `click_link` w pliku *spec/requests/creating_projects_spec.rb*:
 
-    click_link 'New'
+```ruby
+click_link 'New'
+```
 
 Zmiany z gałęzi *add-bootstrap* scaliłem z *master*.
 
@@ -335,12 +363,15 @@ Tytuł strony. Do istniejącego scenariusza dopisujemy cztery wiersze kodu:
 
 W layoucie aplikacji podmieniamy element *title* na:
 
-    <title><%= @title || "Projekt Zespołowy 2012/13" %></title>
+```rhtml
+<title><%= @title || "Projekt Zespołowy 2012/13" %></title>
+```
 
 W pliku *show.html.erb* dopisujemy:
 
-    <% @title = "Projekt Zespołowy | Fortune" %>
-
+```rhtml
+<% @title = "Projekt Zespołowy | Fortune" %>
+```
 
 2\. GREEN: **Refaktoryzacja**
 
@@ -349,25 +380,29 @@ w tytule musi zmieniać się ze zmianą nazwy projektu.
 
 Definiujemy metodę pomocniczą aplikacji:
 
-    module ApplicationHelper
-      def title(*parts)
-        unless parts.empty?
-          content_for :title do
-            parts.unshift("Projekt Zespołowy").join(" | ")
-          end
-        end
+```ruby
+module ApplicationHelper
+  def title(*parts)
+    unless parts.empty?
+      content_for :title do
+        parts.unshift("Projekt Zespołowy").join(" | ")
       end
     end
+  end
+end
+```
 
 Ponownie podmieniamy znacznik *title* w layoucie aplikacji:
 
-    <title>
-    <% if content_for?(:title) %>
-      <%= yield(:title) %>
-    <% else %>
-      Projekt Zespołowy 2012/13
-    <% end %>
-    </title>
+```rhtml
+<title>
+<% if content_for?(:title) %>
+  <%= yield(:title) %>
+<% else %>
+  Projekt Zespołowy 2012/13
+<% end %>
+</title>
+```
 
 3\. **GREEN**.
 
@@ -406,21 +441,38 @@ i usuwamy ze scenariuszy.
 
 W kodzie kontrolera poprawiamy kod metody *create*:
 
-    def create
-      @project = Project.new(params[:project])
-      if @project.save
-        flash[:notice] = "Project has been created."
-        redirect_to @project
-      else
-        flash[:alert] = "Project has not been created."
-        render :action => "new"
-      end
-    end
+```ruby
+def create
+  @project = Project.new(params[:project])
+  if @project.save
+    flash[:notice] = "Project has been created."
+    redirect_to @project
+  else
+    flash[:alert] = "Project has not been created."
+    render :action => "new"
+  end
+end
+```
 
 W kodzie modelu dopisujemy:
 
-    attr_accessible :name, :description
-    validates :name, :presence => true
+```ruby
+attr_accessible :name, :description
+validates :name, :presence => true
+```
 
 2\. GREEN
 
+
+# Gdzie można wdrożyć naszą aplikację?
+
+* [OpenShift](https://openshift.redhat.com/community/get-started/ruby-on-rails)
+* [Heroku](http://www.heroku.com/)
+* [MongoLab](https://mongolab.com/home/) (baza do 0.5GB)
+* [MongoHQ](https://www.mongohq.com/home) (baza do 0.5GB)
+
+
+# Miss stuff
+
+* [Absolutely Dead Simple Login System for Rails With Omniauth and Facebook](http://blog.ragingstudios.com/blog/2012/10/24/absolutely-dead-simple-login-system-for-rails-with-omniauth-and-facebook/)
+* [Render your http errors in your layout reducing the need for static files.](https://github.com/eric1234/better_exception_app)
