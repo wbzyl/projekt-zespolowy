@@ -344,22 +344,24 @@ Zmiany z gałęzi *add-bootstrap* scaliłem z *master*.
 
 Tytuł strony. Do istniejącego scenariusza dopisujemy cztery wiersze kodu:
 
-    feature 'Creating Projects' do
-      scenario "can create a project" do
-        visit '/'
-        click_link 'New Project'
-        fill_in 'Name', :with => 'Fortune'
-        fill_in 'Description', :with => "Sample Rails Apps"
-        click_button 'Create Project'
-        page.should have_content('Project has been created.')
+```ruby
+feature 'Creating Projects' do
+  scenario "can create a project" do
+    visit '/'
+    click_link 'New Project'
+    fill_in 'Name', :with => 'Fortune'
+    fill_in 'Description', :with => "Sample Rails Apps"
+    click_button 'Create Project'
+    page.should have_content('Project has been created.')
 
-        # NEW
-        project = Project.find_by(name: "Fortune")
-        page.current_url.should == project_url(project)
-        title = "Projekt Zespołowy | Fortune"
-        find("title").should have_content(title)
-      end
-    end
+    # NEW
+    project = Project.find_by(name: "Fortune")
+    page.current_url.should == project_url(project)
+    title = "Projekt Zespołowy | Fortune"
+    find("title").should have_content(title)
+  end
+end
+```
 
 1\. RED:
 
@@ -419,22 +421,26 @@ Ponownie podmieniamy znacznik *title* w layoucie aplikacji:
 
 Dodajemy drugi scenariusz:
 
-    scenario "can not create a project without a name" do
-      visit '/'
-      click_link 'New'
-      click_button 'Create Project'
-      page.should have_content("Project has not been created.")
-      page.should have_content("can't be blank")
-    end
+```ruby
+scenario "can not create a project without a name" do
+  visit '/'
+  click_link 'New'
+  click_button 'Create Project'
+  page.should have_content("Project has not been created.")
+  page.should have_content("can't be blank")
+end
+```
 
 Pierwsze dwie linijki obu scenariuszy są takie same. Przenosimy je
 do bloku *before*:
 
-    feature 'Creating Projects' do
-      before do
-        visit '/'
-        click_link 'New'
-      end
+```ruby
+feature 'Creating Projects' do
+  before do
+    visit '/'
+    click_link 'New'
+  end
+```
 
 i usuwamy ze scenariuszy.
 

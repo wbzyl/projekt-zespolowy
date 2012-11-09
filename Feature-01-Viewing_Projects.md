@@ -6,16 +6,18 @@ Tym razem uruchamiamy tylko ten plik spec:
 
 Zawartość tego pliku:
 
-    require 'spec_helper'
+```ruby
+require 'spec_helper'
 
-    feature "Viewing projects" do
-      scenario "Listing all projects" do
-        project = FactoryGirl.create(:project, name: "Fortune")
-        visit '/'
-        click_link 'Fortune'
-        page.current_url.should == project_url(project)
-      end
-    end
+feature "Viewing projects" do
+  scenario "Listing all projects" do
+    project = FactoryGirl.create(:project, name: "Fortune")
+    visit '/'
+    click_link 'Fortune'
+    page.current_url.should == project_url(project)
+  end
+end
+```
 
 **Motywacja:** If you weren’t using factories, you’d have to use this
 method to create the object instead:
@@ -32,13 +34,14 @@ place—where the factory is defined. (*Rails 4 in Action*)
 W katalogu *spec/factories* powinien być plik *projects.rb*.
 O mniej więcej takiej zawartości:
 
-    FactoryGirl.define do
-      factory :project do
-        name "Fortune"
-        description "A simple Rails 3 app"
-      end
-    end
-
+```ruby
+FactoryGirl.define do
+  factory :project do
+    name "Fortune"
+    description "A simple Rails 3 app"
+  end
+end
+```
 
 1\. RED:
 
@@ -49,6 +52,8 @@ O mniej więcej takiej zawartości:
 
 W pliku *index.html.erb* podmieniamy wiersz z `project.name` na:
 
-    <td><%= link_to project.name, project %></td>
+```rhtml
+<td><%= link_to project.name, project %></td>
+```
 
 2\. GREEN
