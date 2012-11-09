@@ -472,6 +472,13 @@ validates :name, :presence => true
 2\. GREEN
 
 
+# Więcej testów…
+
+1. [viewing projects](https://github.com/wbzyl/projekt-zespolowy/blob/master/Feature-01-Viewing_Projects.md)
+2. [editing projects](https://github.com/wbzyl/projekt-zespolowy/blob/master/Feature-02-Editing_Projects.md)
+3. [deleting projects](https://github.com/wbzyl/projekt-zespolowy/blob/master/Feature-03-Deleting_Projects.md)
+
+
 # Gdzie można wdrożyć naszą aplikację?
 
 * [OpenShift](https://openshift.redhat.com/community/get-started/ruby-on-rails)
