@@ -1,6 +1,6 @@
 # Projekt Zespołowy
 
-Przykładowa aplikacja Rails 3.2 korzystająca z bazy MongoDB,
+Przykładowa aplikacja Rails 3.2 korzystająca z bazy MongoDB
 (gem Mongoid) z autentykacją OAuth (via Github), autoryzacją
 (gem CanCan) i z testami RSpec.
 
@@ -34,14 +34,14 @@ generator *scaffold*. (Użyteczna ściąga?)
 
 ## RSpec
 
-Poniżej wkleiłem kod testów *requests* (*integration*)
-oraz *controllers*.
+Poniżej wkleiłem kod testów *requests* (dawniej nazywanych integration)
+oraz testów *controllers*.
 
 Wszystkie testy uruchamiamy wpisując na konsoli:
 
     rake spec:requests
 
-albo, uruchamiając konkretny test, tak:
+albo, uruchamiając konkretny test, w taki sposób:
 
     rspec spec/requests/creating_projects_spec.rb
 
