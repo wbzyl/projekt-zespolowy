@@ -4,7 +4,7 @@ Tym razem uruchamiamy tylko ten plik spec:
 
     rspec spec/requests/viewing_projects_spec.rb
 
-Zawartość tego pliku:
+A to jego zawartość:
 
 ```ruby
 require 'spec_helper'
@@ -19,10 +19,14 @@ feature "Viewing projects" do
 end
 ```
 
-**Motywacja:** If you weren’t using factories, you’d have to use this
+## Motywacja aby użyć *FactoryGirl.create* zamiast *Project.create*
+
+If you weren’t using factories, you’d have to use this
 method to create the object instead:
 
-    Project.create(:name => name)
+```ruby
+Project.create(name: "name")
+```
 
 While this code is about the same length as its Factory variant, it
 isn’t future-proof. If you were to add another field to the projects
