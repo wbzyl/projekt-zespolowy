@@ -12,5 +12,5 @@
 eople sometimes poke around an application looking for things
 that are no longer there […] try to navigate to
 
-    http://localhost:3000/projects/007🔫
+    http://localhost:3000/projects/⛔
 
