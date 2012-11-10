@@ -19,7 +19,7 @@ feature "Viewing projects" do
 end
 ```
 
-## Motywacja aby użyć *FactoryGirl.create* zamiast *Project.create*
+## Dlaczego użyliśmy *FactoryGirl.create* zamiast *Project.create*
 
 If you weren’t using factories, you’d have to use this
 method to create the object instead:
