@@ -1,10 +1,10 @@
 # Requests: Deleting Projects
 
-Testujemy uruchamiając ten plik spec:
+Testujemy korzystając z *features* z pliku *deleting_projects_spec.rb*:
 
     rspec spec/requests/deleting_projects_spec.rb
 
-Zawartość tego pliku:
+Oto zawartość tego pliku:
 
 ```ruby
 feature "Deleting projects" do
