@@ -1,10 +1,11 @@
 # Requests: Editing Projects
 
-I tym razem uruchamiamy tylko jeden plik spec:
+Tak jak poprzednio uruchamiamy tylko jeden plik spec:
 
     rspec spec/requests/editing_projects_spec.rb
 
-Plik zwiera dwa scenariusze:
+Tym razem plik zwiera dwa scenariusze. Kod wspólny dla obu
+scenariuszy umieściłem w bloku *before*:
 
 ```ruby
 feature "Editing Projects" do
