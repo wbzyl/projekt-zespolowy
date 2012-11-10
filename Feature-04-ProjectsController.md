@@ -92,3 +92,8 @@ Na konsoli, więcej info:
 
     ):
       app/controllers/projects_controller.rb:23:in `show'
+
+Zapomniałem o konfiguracji gemu Mongoid dla *production*. Poprawiam
+konfigurację i ponownie wchodzę na stronę. Oto rezultat:
+
+![something went wrong](https://raw.github.com/wbzyl/projekt-zespolowy/master/public/page-may-have-moved.png)
