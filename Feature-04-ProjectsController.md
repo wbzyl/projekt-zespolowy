@@ -8,3 +8,9 @@
 >      print_err("I can’t go on metting you like this");
 >      help2("One of your faux pas seems to have wounded me deeply...")
 >      ("in fact, I’m barely conscious. Please fix it and try again.")
+
+eople sometimes poke around an application looking for things
+that are no longer there […] try to navigate to
+
+    http://localhost:3000/projects/007🔫
+
