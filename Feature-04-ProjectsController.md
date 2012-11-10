@@ -59,7 +59,9 @@ rails server -e production
 
 and visit the above URL once more.
 
+![something went wrong](https://raw.github.com/wbzyl/projekt-zespolowy/master/public/something-went-wrong.png)
 
+Na konsoli, więcej info:
 
     Started GET "/projects/%E2%9B%94" for 127.0.0.1 at 2012-11-10 20:55:56 +0100
     Processing by ProjectsController#show as HTML
