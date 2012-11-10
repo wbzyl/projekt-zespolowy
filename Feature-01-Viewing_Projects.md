@@ -11,7 +11,7 @@ require 'spec_helper'
 
 feature "Viewing projects" do
   scenario "Listing all projects" do
-    project = FactoryGirl.create(:project, name: "Fortune")
+    project = FactoryGirl.create(:project, name: "Fortune") # zob. uwaga poniżej
     visit '/'
     click_link 'Fortune'
     page.current_url.should == project_url(project)
@@ -33,7 +33,7 @@ isn’t future-proof. If you were to add another field to the projects
 table and add a validation (say, a presence one) for that field, you’d
 have to change all occurrences of the create method to contain this
 new field. When you use factories, you can change it in one
-place—where the factory is defined. (*Rails 4 in Action*)
+place—where the factory is defined. (źródło: _Rails 4 in Action_)
 
 W katalogu *spec/factories* powinien być plik *projects.rb*.
 O mniej więcej takiej zawartości:
