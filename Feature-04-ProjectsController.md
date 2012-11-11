@@ -99,3 +99,100 @@ konfigurację i ponownie wchodzę na stronę. Oto rezultat:
 ![something went wrong](https://raw.github.com/wbzyl/projekt-zespolowy/master/public/page-may-have-moved.png)
 
 A na konsoli ten sam tekst co w trybie *development*.
+
+
+# Obsługa wyjątku *Mongoid::Errors::DocumentNotFound*
+
+Zamiast strony *404* przekierujemy użytkownika na stronę główną
+aplikacji, na której umieścimy jakiś stosowny komunikat.
+
+Testujemy *controller* a nie *request* ponieważ:
+
+* takie testy łatwiej się pisze (?)
+* testujemy to co użytkownik **może** zrobić,
+  a nie to co **powinien** zrobić (?)
+
+W katalogu *spec/controllers* powinniśmy znaleźć plik *projects_controller.rb*.
+Został on wygenerowany przez generator *controller*.
+Dopisujemy do bloku *describe* nieco kodu. Oto ten plik po tych zmianach:
+
+```ruby
+# -*- coding: utf-8 -*-
+require 'spec_helper'
+describe ProjectsController do
+  describe ProjectsController do
+    it "displays an error for a missing project" do
+      get :show, :id => "⛔"
+      response.should redirect_to(projects_path)
+      message = "The project you were looking for could not be found."
+      flash[:alert].should == message
+    end
+  end
+end
+```
+
+Wykonujemy ten test:
+
+```sh
+ rspec spec/controllers/projects_controller_spec.rb
+```
+
+1\. RED
+
+    1) ProjectsController ProjectsController displays an error for a missing project
+       Failure/Error: get :show, :id => "⛔"
+       Mongoid::Errors::DocumentNotFound:
+
+         Problem:
+           Document(s) not found for class Project with id(s) ⛔.
+         Summary:
+           ...
+         Resolution:
+           Search for an id that is in the database or set
+           the Mongoid.raise_not_found_error configuration option to false,
+           which will cause a nil to be returned instead of raising
+           this error when searching for a single id,
+           or only the matched documents when searching for multiples.
+
+Poprawki w kodzie kontrolera:
+
+```ruby
+before_filter :find_project, :only => [:show, :edit, :update, :destroy]
+
+[... bez zmian ...]
+
+# z kodu metod usunięto jeden wiersz kodu:
+#  @project = Project.find(params[:id])
+
+def show
+end
+
+def edit
+end
+
+def update
+  if @project.update_attributes(params[:project])
+    redirect_to @project, notice: 'Project has been updated.'
+  else
+    flash[:alert] = "Project has not been updated."
+    render action: "edit"
+  end
+end
+
+def destroy
+  @project.destroy
+  flash[:notice] = "Project has been deleted."
+  redirect_to projects_path
+end
+
+private
+
+def find_project
+  @project = Project.find(params[:id])
+rescue Mongoid::Errors::DocumentNotFound
+  flash[:alert] = "The project you were looking for could not be found."
+  redirect_to projects_path
+end
+```
+
+2\. GREEN
