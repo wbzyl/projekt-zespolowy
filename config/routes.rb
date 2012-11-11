@@ -2,9 +2,15 @@ ProjektZespolowy::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
+  match '/auth/:provider/callback' => 'sessions#create'
+  match '/auth/failure' => 'sessions#failure'
+
+  match '/login' => 'sessions#new', :as => :login
+  match '/logout' => 'sessions#destroy', :as => :logout
+
   resources :projects
 
-  root :to => "projects#index"
+  root to: "projects#index"
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
