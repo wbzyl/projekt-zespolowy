@@ -8,7 +8,7 @@ Dodajemy logowanie użytkowników via Github.
 Model:
 
 ```sh
-rails generate model user provider uid name email
+rails generate model user provider uid name nickname email
   invoke  mongoid
   create    app/models/user.rb
   invoke    rspec
@@ -21,12 +21,15 @@ Do wygenerowanego modelu dopisujemy linijkę kodu z *attr_accessible*:
 
 ```ruby
 class User
-  attr_protected :provider, :uid, :name, :email
+  attr_protected :provider, :uid, :name, :nickname, :email
 
   include Mongoid::Document
+
   field :provider, type: String
   field :uid, type: String
+
   field :name, type: String
+  field :nickname, type: String
   field :email, type: String
 end
 ```
@@ -147,9 +150,10 @@ class SessionController < ApplicationController
   def failure
     redirect_to root_url, :alert => "Authentication error: #{params[:message].humanize}"
   end
-
 ...
 ```
+Zobacz też [Auth Hash Schema](https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema).
+
 
 ## Github
 
@@ -192,12 +196,13 @@ extra: !ruby/hash:Hashie::Mash
 ```
 
 
-## Store Authentication Data in the User Object
-
-TODO
-
-
 # OmniAuth requests & RSpec
 
 * [Easy Rails OAuth Integration Testing](http://blog.zerosum.org/2011/03/19/easy-rails-outh-integration-testing.html)
 * [OmniAuth Wiki](https://github.com/intridea/omniauth/wiki)
+
+
+## Store Authentication Data in the User Object
+
+TODO
+
