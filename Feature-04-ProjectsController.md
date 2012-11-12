@@ -1,5 +1,9 @@
 # This can’t happen
 
+**Jesteś tutaj:**
+
+    git checkout -b 04-projects_controller bcbeadf0
+
 > D. E. Knuth, „Computers & Typesetting”, p.40:
 >
 >      print_err("This can’t happen ("); print(s); print_char(")");
