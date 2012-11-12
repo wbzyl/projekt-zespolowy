@@ -25,7 +25,7 @@ Linki do dokumentacji (gemów, Twitter Bootstrap, etc.):
 
 TODO:
 
-* przyśpieszenie wykonywania testów
+* Przyśpieszamy wykonywania testów
   – [Testing JavaScript with PhantomJS](http://railscasts.com/episodes/391-testing-javascript-with-phantomjs)
 
 W katalogu *doc* umieściłem kilka plików generowanych przez
@@ -134,7 +134,9 @@ Tworzymy pusty plik na konsoli:
 
 Dopisujemy do pliku *index.html.erb*:
 
-    <%= link_to "New Project", new_project_path %>
+```rhtml
+<%= link_to "New Project", new_project_path %>
+```
 
 6\. RED:
 
