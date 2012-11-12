@@ -2,6 +2,8 @@
 
 **Jesteś tutaj:**
 
+![01 viewing project](https://raw.github.com/wbzyl/projekt-zespolowy/master/public/01-viewing_project.png)
+
     git checkout -b wyklad-19-11 f29afadb
 
 Tym razem uruchamiamy tylko ten plik spec:
