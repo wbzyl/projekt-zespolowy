@@ -1,5 +1,9 @@
 # Requests: Deleting Projects
 
+**Jesteś tutaj:**
+
+    git checkout -b 03_deleting_projects f6d596c9
+
 Testujemy korzystając z *features* z pliku *deleting_projects_spec.rb*:
 
     rspec spec/requests/deleting_projects_spec.rb
