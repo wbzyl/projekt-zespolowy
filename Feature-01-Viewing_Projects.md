@@ -2,7 +2,7 @@
 
 **Jesteś tutaj:**
 
-![01 viewing project](https://raw.github.com/wbzyl/projekt-zespolowy/master/public/01-viewing_project.png)
+![viewing project 01](https://raw.github.com/wbzyl/projekt-zespolowy/master/public/viewing_project-01.png)
 
     git checkout -b wyklad-19-11 f29afadb
 
