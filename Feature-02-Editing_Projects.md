@@ -2,7 +2,7 @@
 
 **Jesteś tutaj:**
 
-    git co -b wyklad-19-11 9fcff060
+    git checkout -b 02-editing_projects 9fcff060
 
 Tak jak poprzednio uruchamiamy tylko jeden plik spec:
 
