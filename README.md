@@ -248,10 +248,10 @@ end
 
 Dopisujemy do kontrolera „niepustą” metodę *show* (pusta metoda to za mało):
 
-```rubt
-    def show
-      @project = Project.find(params[:id])
-    end
+```ruby
+def show
+  @project = Project.find(params[:id])
+end
 ```
 
 13\. RED:
