@@ -1,5 +1,9 @@
 # Requests: Viewing Projects
 
+Jesteś tutaj:
+
+    git co -b wyklad-19-11 f29afadbf
+
 Tym razem uruchamiamy tylko ten plik spec:
 
     rspec spec/requests/viewing_projects_spec.rb
