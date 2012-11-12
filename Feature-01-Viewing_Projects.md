@@ -1,8 +1,8 @@
 # Requests: Viewing Projects
 
-Jesteś tutaj:
+**Jesteś tutaj:**
 
-    git checkout -b wyklad-19-11 f29afadbf
+    git checkout -b wyklad-19-11 f29afadb
 
 Tym razem uruchamiamy tylko ten plik spec:
 
