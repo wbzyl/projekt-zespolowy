@@ -1,5 +1,9 @@
 # Requests: Editing Projects
 
+**Jesteś tutaj:**
+
+    git co -b wyklad-19-11 9fcff060
+
 Tak jak poprzednio uruchamiamy tylko jeden plik spec:
 
     rspec spec/requests/editing_projects_spec.rb
