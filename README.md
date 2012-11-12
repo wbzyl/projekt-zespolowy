@@ -23,10 +23,9 @@ Linki do dokumentacji (gemów, Twitter Bootstrap, etc.):
 * [omniauth-github](https://github.com/intridea/omniauth-github)
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 
-TODO:
+Przyspieszamy wykonywanie testów (z JavaScript, remote):
 
-* Przyśpieszamy wykonywania testów
-  – [Testing JavaScript with PhantomJS](http://railscasts.com/episodes/391-testing-javascript-with-phantomjs)
+– [Testing JavaScript with PhantomJS](http://railscasts.com/episodes/391-testing-javascript-with-phantomjs)
 
 W katalogu *doc* umieściłem kilka plików generowanych przez
 generator *scaffold*. (Użyteczna ściąga?)
