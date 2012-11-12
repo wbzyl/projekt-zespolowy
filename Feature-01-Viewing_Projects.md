@@ -2,7 +2,7 @@
 
 Jesteś tutaj:
 
-    git co -b wyklad-19-11 f29afadbf
+    git checkout -b wyklad-19-11 f29afadbf
 
 Tym razem uruchamiamy tylko ten plik spec:
 
