@@ -1,6 +1,6 @@
 # Requests: Editing Projects
 
-**Jesteś tutaj:**
+![editing project](https://raw.github.com/wbzyl/projekt-zespolowy/master/public/editing_project.png)
 
     git checkout -b 02-editing_projects 9fcff060
 
