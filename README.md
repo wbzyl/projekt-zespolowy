@@ -1,5 +1,15 @@
 # Projekt Zespołowy
 
+**TODO:** upgrade do Capybara 2.0.0 i RSpec Rails 2.12 i Mongoid jaka wersja??
+
+* [rspec-rails and capybara 2.0: what you need to know](http://alindeman.github.com/2012/11/11/rspec-rails-and-capybara-2.0-what-you-need-to-know.html)
+* [mongoid-rspec](https://github.com/evansagge/mongoid-rspec)
+* [rspec-rails 2.12](https://www.relishapp.com/rspec/rspec-rails/docs)
+
+Announcment:
+
+* [Capybara 2.0.0](https://groups.google.com/forum/?fromgroups=#!topic/ruby-capybara/C0O7nP2YG1A)
+
 Przykładowa aplikacja Rails 3.2 korzystająca z bazy MongoDB
 (gem Mongoid) z autentykacją OAuth (via Github), autoryzacją
 (gem CanCan) i z testami RSpec.
