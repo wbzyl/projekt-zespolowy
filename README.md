@@ -12,14 +12,15 @@ Announcement:
 
 ### RVM
 
-Szybsze uruchamianie aplikacji Rails:
+Szybsze uruchamianie aplikacji Rails (1.8s v. 8.2s):
 
 ```sh
 rvm install 1.9.3-p286 --patch falcon -n falcon
+
 rvm use 1.9.3-p286-falcon
 time rails runner "puts :OK"
-rvm use 1.9.3-p387
-rvm use 1.9.3-p286-falcon
+rvm use 1.9.3-p327
+time rails runner "puts :OK"
 ```
 
 Przykładowa aplikacja Rails 3.2 korzystająca z bazy MongoDB
