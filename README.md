@@ -6,9 +6,21 @@
 * [mongoid-rspec](https://github.com/evansagge/mongoid-rspec)
 * [rspec-rails 2.12](https://www.relishapp.com/rspec/rspec-rails/docs)
 
-Announcment:
+Announcement:
 
 * [Capybara 2.0.0](https://groups.google.com/forum/?fromgroups=#!topic/ruby-capybara/C0O7nP2YG1A)
+
+### RVM
+
+Szybsze uruchamianie aplikacji Rails:
+
+```sh
+rvm install 1.9.3-p286 --patch falcon -n falcon
+rvm use 1.9.3-p286-falcon
+time rails runner "puts :OK"
+rvm use 1.9.3-p387
+rvm use 1.9.3-p286-falcon
+```
 
 Przykładowa aplikacja Rails 3.2 korzystająca z bazy MongoDB
 (gem Mongoid) z autentykacją OAuth (via Github), autoryzacją
