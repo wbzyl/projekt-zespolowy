@@ -2,7 +2,11 @@
 
 **TODO:** upgrade do Capybara 2.0.0 i RSpec Rails 2.12 i Mongoid jaka wersja??
 
-* [rspec-rails and capybara 2.0: what you need to know](http://alindeman.github.com/2012/11/11/rspec-rails-and-capybara-2.0-what-you-need-to-know.html)
+* Andy Lindeman,
+  [rspec-rails and capybara 2.0: what you need to know](http://alindeman.github.com/2012/11/11/rspec-rails-and-capybara-2.0-what-you-need-to-know.html)
+* Jonas Nicklas,
+  [Simple tricks to clean up your Capybara tests](http://www.elabs.se/blog/51-simple-tricks-to-clean-up-your-capybara-tests)
+* Capybara [History](https://github.com/jnicklas/capybara/blob/master/History.md)
 * [mongoid-rspec](https://github.com/evansagge/mongoid-rspec)
 * [rspec-rails 2.12](https://www.relishapp.com/rspec/rspec-rails/docs)
 
