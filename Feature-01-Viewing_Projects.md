@@ -1,7 +1,5 @@
 # Requests: Viewing Projects
 
-**Jesteś tutaj:**
-
 ![viewing project](https://raw.github.com/wbzyl/projekt-zespolowy/master/public/viewing_project.png)
 
     git checkout -b wyklad-19-11 f29afadb

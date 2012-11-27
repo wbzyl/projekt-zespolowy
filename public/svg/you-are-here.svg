@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="728px"
+   height="90px"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="you-are-here.svg"
+   inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/you-are-here-2.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs2987">
+    <marker
+       inkscape:stockid="Arrow2Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lstart"
+       style="overflow:visible">
+      <path
+         id="path3796"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path3778"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.5"
+     inkscape:cx="243.06254"
+     inkscape:cy="55"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1050"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       style="fill:#b9121b;fill-opacity:1;stroke-width:1.20000005000000010;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 226.04763,1.9895829 c -1.3662,0 -2.46069,1.2748629 -2.46069,2.8480191 l 0,33.447138 c 0,1.573156 1.09449,2.83663 2.46069,2.83663 l 3.66825,0 8.38456,8.384567 c 1.11239,1.112385 2.79334,1.228061 3.75938,0.262017 l 8.64659,-8.646584 3.66825,0 c 1.3662,0 2.4607,-1.263474 2.4607,-2.83663 l 0,-33.447138 c 0,-1.5731562 -1.0945,-2.8480191 -2.4607,-2.8480191 l -28.12703,0 z"
+       id="rect3081"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="opacity:0.65066665999999995;fill:#f6e496;fill-opacity:1"
+       id="rect2993"
+       width="98"
+       height="37.333332"
+       x="53.399094"
+       y="51.333344"
+       rx="4"
+       ry="4"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       ry="4"
+       rx="4"
+       y="51.333344"
+       x="330.22226"
+       height="37.333332"
+       width="98"
+       id="rect2995"
+       style="opacity:0.65066665999999995;fill:#f6e496;fill-opacity:1"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="opacity:0.65066665999999995;fill:#f6e496;fill-opacity:1"
+       id="rect2997"
+       width="98"
+       height="37.333332"
+       x="191.11115"
+       y="51.333344"
+       rx="4"
+       ry="4"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#f6e496;stroke:#000000;stroke-width:0.97411822999999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);fill-opacity:1"
+       d="m 151.17483,69.982842 c 39.5681,0 39.5681,0 39.5681,0"
+       id="path3005"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       ry="4"
+       rx="4"
+       y="51.333344"
+       x="469.3334"
+       height="37.333332"
+       width="98"
+       id="rect2999"
+       style="opacity:0.65066665999999995;fill:#f6e496;fill-opacity:1"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#4c1b1b;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
+       x="474.77042"
+       y="76.710426"
+       id="text4691"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4693"
+         x="474.77042"
+         y="76.710426">0d8598f6</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4587"
+       d="m 429.39708,69.982842 c 39.5681,0 39.5681,0 39.5681,0"
+       style="fill:#f6e496;stroke:#000000;stroke-width:0.97411822999999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);fill-opacity:1"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#f6e496;stroke:#000000;stroke-width:0.97411822999999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);fill-opacity:1"
+       d="m 290.28594,69.982842 c 39.5681,0 39.5681,0 39.5681,0"
+       id="path4589"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4591"
+       d="m 12.50816,69.982842 c 39.5681,0 39.5681,0 39.5681,0"
+       style="fill:#803300;stroke:#000000;stroke-width:0.97411823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart)"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#803300;stroke:#000000;stroke-width:0.97411823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart)"
+       d="m 568.50816,69.982842 c 39.5681,0 39.5681,0 39.5681,0"
+       id="path4593"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#4c1b1b;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
+       x="196.82062"
+       y="76.710426"
+       id="text4679"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4681"
+         x="196.82062"
+         y="76.710426">9fcff060</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#4c1b1b;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
+       x="59.090988"
+       y="76.710426"
+       id="text4683"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4685"
+         x="59.090988"
+         y="76.710426">89d7b536</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#4c1b1b;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
+       x="335.65927"
+       y="76.710426"
+       id="text4687"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/wbzyl/repos/hello/projekt-zespolowy/public/01-viewing_project.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4689"
+         x="335.65927"
+         y="76.710426">6ada3a6a</tspan></text>
+    <g
+       id="g3878"
+       transform="matrix(0.36454647,0,0,0.36454647,148.33715,57.958269)"
+       style="fill:#241c1c">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3866"
+         y="-124.44834"
+         x="232.70723"
+         style="font-size:21.95741072px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#241c1c;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono Bold"
+         xml:space="preserve"><tspan
+           y="-124.44834"
+           x="232.70723"
+           id="tspan3868"
+           sodipodi:role="line">YOU</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3870"
+         y="-94.111382"
+         x="231.8656"
+         style="font-size:21.95741072px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#241c1c;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono Bold"
+         xml:space="preserve"><tspan
+           y="-94.111382"
+           x="231.8656"
+           id="tspan3872"
+           sodipodi:role="line">ARE</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3874"
+         y="-59.389366"
+         x="224.92886"
+         style="font-size:21.95741072px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#241c1c;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono Bold"
+         xml:space="preserve"><tspan
+           y="-59.389366"
+           x="224.92886"
+           id="tspan3876"
+           sodipodi:role="line">HERE</tspan></text>
+    </g>
+  </g>
+</svg>

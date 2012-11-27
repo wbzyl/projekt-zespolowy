@@ -18,6 +18,8 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 
+  gem 'less-rails'
+  gem 'therubyracer'
   gem 'twitter-bootstrap-rails', '~> 2.1.4'
   gem 'jquery-ui-rails', '~> 2.0.2'
   gem 'jquery-datatables-rails', '~> 1.11.1'
